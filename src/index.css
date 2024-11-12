@@ -68,6 +68,10 @@ nav {
   align-self: flex-start;
 }
 
+.gap-22 {
+  gap: 22px;
+}
+
 .px-8 {
   padding-left: 8px;
   padding-right: 8px;
@@ -78,6 +82,11 @@ nav {
   padding-bottom: 2px;
 }
 
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .px-16 {
   padding-left: 16px;
   padding-right: 16px;
@@ -86,11 +95,6 @@ nav {
 .px-30 {
   padding-left: 30px;
   padding-right: 30px;
-}
-
-.py-24 {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .pt-6 {
@@ -135,6 +139,10 @@ nav {
 
 .absolute {
   position: absolute;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .left-5 {

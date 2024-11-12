@@ -1,20 +1,30 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Card } from "./components/Card";
+import data from "./data";
+
+const cards = data.map((item) => {
+  return (
+    <Card
+      key={item.id}
+      img={item.coverImg(item.id + item.price)}
+      rating={item.stats.rating}
+      reviewCount={item.stats.reviewCount}
+      location={item.location}
+      title={item.title}
+      price={item.price}
+      openSpots={item.openSpots}
+    />
+  );
+});
+
 function App() {
   return (
     <>
       <Navbar />
       <main className="px-30 py-24">
         {/* <Hero /> */}
-        <Card
-          img="https://picsum.photos/200/300"
-          rating="5.0"
-          reviewCount={6}
-          country="Ze country"
-          title="Life Lessons with random image"
-          price={136}
-        />
+        <section className="flex gap-22 overflow-x-auto py-24">{cards}</section>
       </main>
     </>
   );
