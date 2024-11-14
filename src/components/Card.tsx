@@ -28,15 +28,15 @@ export function Card(item: CardProps) {
           src={item.coverImg(item.id + item.price)}
           alt="Random image"
         />
-        {badgeText && (
-          <span className="absolute left-5 top-5 inline-block upper text-center background-grey-100 px-8 py-2 min-w-75 rounded-3 text-0-8">
+        {!!badgeText && (
+          <span className="absolute left-5 top-5 inline-block px-8 py-2 min-w-75 upper text-center badge-bg-color badge-color rounded-3 text-0-8">
             {badgeText}
           </span>
         )}
       </div>
       <div className="pt-6">
         <div>
-          <span className="text-yellow-700">★</span> {item.stats.rating} (
+          <span className="star-color">★</span> {item.stats.rating} (
           {item.stats.reviewCount}){" • "}
           {item.location}
         </div>
